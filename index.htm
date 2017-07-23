@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USGS Philippine Earthquakes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
+
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.17.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.17.0/mapbox-gl.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="js/moment.min.js"></script>         
+    <script src="js/daterangepicker.js"></script>
+    
+</head>
+<body>
+<div class="w3-sidebar collapse" id="mySidebar">
+  <h3 class="title_head">USGS Philippine Earthquakes</h3>
+    <div id="reportrange">
+        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+        <span></span> <b class="caret"></b>
+    </div>   
+    <div class="details_fill">
+    <h4>Philippines has had: (M1.5 or greater)</h4>
+    <ul>
+        <li>1 earthquake in the past 24 hours</li>
+        <li>4 earthquakes in the past 7 days</li>
+        <li>17 earthquakes in the past 30 days</li>
+        <li>223 earthquakes in the past 365 days</li>
+    </ul>
+    <h5>Earthquake Alerts via Twitter:</h5>
+    <a id="follow_button" class="btn" title="Follow @QuakesToday on Twitter" href="https://twitter.com/intent/follow?ref_src=twsrc%5Etfw&amp;region=follow_link&amp;screen_name=QuakesToday&amp;tw_p=followbutton"><i class="fa fa-twitter" aria-hidden="true"></i><span class="label" id="l">Follow <b>@QuakesToday</b></span></a>
+    </div> 
+</div>
+<div class="w3-main" id="main">
+    <button id="osidebtn" class="w3-button w3-teal w3-xlarge w3-animate-left" data-toggle="collapse" data-target="#mySidebar">&#9776;</button>
+    <div class="w3-container">
+        <div id='map'></div>
+    </div>
+</div>
+<script type="text/javascript" src="js/load-data.js"></script>
+<script async defer type="text/javascript" src="js/map.js"></script>
+</body>
+</html>
